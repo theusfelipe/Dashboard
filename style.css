@@ -36,16 +36,19 @@ line-height: 160%;
     background: #292738;
 
     
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 29.6rem max-content max-content;
     grid-template-rows: max-content;
 
-    width: 100vw;
-    height: 100vh;
+    width: fit-content;
+    height:fit-content;
+    min-height: 100vh;
+    min-width: 100vw;
 
     padding: 11.2rem 12.3rem;
     column-gap: 3.2rem;
 
     row-gap: 5.9rem;
+    place-content: center;
 }
 
 
@@ -67,24 +70,44 @@ line-height: 160%;
     display: flex;
     gap: 2rem;
     justify-content: center;
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .bottom .item{
     display: flex;
+    align-items: center;
     gap: 1rem;
-    
+
+}
+.bottom .item span:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.bottom .item span {
+    --bg-color:#4A4556;
 }
 
 
 
-.nps {
+ .bottom .item span:nth-child(1)::before {
+    --bg-color:#4A4556;
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    background: var(--bg-color);
+    border-radius: 999px;
+ }
 
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 160%;
-    width: 29.6rem;
-    gap: 3.2rem;
-    
+ 
+
+
+.nps {
+    gap: 3.2rem;  
 }
 
 .nps .middle {
@@ -97,8 +120,5 @@ line-height: 160%;
 }
 
 .nps .bottom {
-    font-weight: 500;
-    font-size: 14px;  
-  justify-content: center;
-  gap: 1rem;
+     gap: 1rem;
 }
