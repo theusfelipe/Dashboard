@@ -94,7 +94,6 @@ line-height: 160%;
 
 
  .bottom .item span:nth-child(1)::before {
-    --bg-color:#4A4556;
     content: "";
     width: 1.5rem;
     height: 1.5rem;
